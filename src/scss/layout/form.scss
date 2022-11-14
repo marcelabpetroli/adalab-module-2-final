@@ -1,0 +1,28 @@
+.form {
+  display: flex;
+  align-items: center;
+}
+.section-form {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 70vw;
+  height: 8vh;
+}
+.section-form-input {
+  border: solid 2px orange;
+  width: 60vw;
+  padding: 0.8rem;
+  margin: 3rem;
+}
+.btn-search {
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5%;
+  width: 5.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
