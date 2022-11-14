@@ -1,5 +1,16 @@
 'use strict';
 
+// Function to create html for each character
+function handleClick(event) {
+  event.preventDefault();
+  const inputValue = searchInputElement.value;
+  contentResultsElement.innerHTML = '';
+
+  const filteredCharacters = characters.filter((eachCharacter) => eachCharacter.name.toLowerCase().includes(inputValue));
+
+  renderCharacters(filteredCharacters, contentResultsElement);
+}
+
 function renderCharacters(characArray, container) {
   characArray.forEach((element) => {
     const characterInFavoritesIndex = favorites.findIndex((character) => character.char_id === element.char_id);
