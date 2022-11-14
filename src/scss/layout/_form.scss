@@ -9,8 +9,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: $white;
-  width: 70vw;
-  height: 8vh;
+  width: 75vw;
+  height: 12vh;
+  @media (min-width: 1500px) {
+    height: 8vh;
+    width: 70vw;
+  }
 }
 .section-form-input {
   border: solid 2px $orange;

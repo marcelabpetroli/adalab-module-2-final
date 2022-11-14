@@ -12,6 +12,9 @@
 }
 .walter-gif {
   position: absolute;
-  padding-top: 1.5rem;
-  width: 8rem;
+  padding-top: 1.6rem;
+  width: 7rem;
+  @media (min-width: 1500px) {
+    width: 8rem;
+  }
 }
