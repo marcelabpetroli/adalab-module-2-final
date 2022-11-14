@@ -7,10 +7,10 @@ function handleClick(event) {
 
   const filteredCharacters = characters.filter((eachCharacter) => eachCharacter.name.toLowerCase().includes(inputValue.toLowerCase()));
 
-  renderCharacters(filteredCharacters, contentResultsElement);
+  renderAll(filteredCharacters, contentResultsElement);
 }
 
-function renderCharacters(characArray, container) {
+function renderAll(characArray, container) {
   characArray.forEach((element) => {
     const characterInFavoritesIndex = favorites.findIndex((character) => character.char_id === element.char_id);
 
@@ -20,13 +20,38 @@ function renderCharacters(characArray, container) {
     } else {
       classFavorite = 'selected';
     }
-    container.appendChild(renderOneCharacter(element, classFavorite));
+    const article = renderTemplate(element, classFavorite);
+    const listElement = document.createElement('li');
+    listElement.setAttribute('class', 'list-element');
+    listElement.appendChild(article);
+    container.appendChild(listElement);
   });
   addAllListeners();
 }
 
-function renderOneCharacter(element, classFav) {
-  const listElement = document.createElement('li');
+function renderFavorites(characArray, container) {
+  characArray.forEach((element) => {
+    const characterInFavoritesIndex = favorites.findIndex((character) => character.char_id === element.char_id);
+
+    let classFavorite = '';
+    if (characterInFavoritesIndex === -1) {
+      classFavorite = '';
+    } else {
+      classFavorite = 'selected';
+    }
+    const article = renderTemplate(element, classFavorite);
+    const listElement = document.createElement('li');
+    listElement.setAttribute('class', 'list-element');
+    const deleteElement = document.createElement('i');
+    deleteElement.setAttribute('class', 'fa-solid fa-trash-can');
+    article.appendChild(deleteElement);
+    listElement.appendChild(article);
+    container.appendChild(listElement);
+  });
+  addAllListeners();
+}
+
+function renderTemplate(element, classFav) {
   const articleElement = document.createElement('article');
   const imageContainer = document.createElement('div');
   const imageElement = document.createElement('img');
@@ -36,7 +61,6 @@ function renderOneCharacter(element, classFav) {
   const title = document.createTextNode(element.name);
   const status = document.createTextNode(element.status);
 
-  listElement.setAttribute('class', 'list-element');
   articleElement.setAttribute('class', `js_characters article-character ${classFav}`);
   articleElement.setAttribute('id', element.char_id);
   statusElement.setAttribute('class', 'status');
@@ -53,9 +77,8 @@ function renderOneCharacter(element, classFav) {
   articleElement.appendChild(imageContainer);
   articleElement.appendChild(nameElement);
   articleElement.appendChild(statusElement);
-  listElement.appendChild(articleElement);
 
-  return listElement;
+  return articleElement;
 }
 
 function addAllListeners() {
@@ -78,7 +101,9 @@ function handleClickCharacter(event) {
     favorites.splice(characterInFavoritesIndex, 1);
     localStorage.setItem('favoriteCharacters', JSON.stringify(favorites));
   }
-
+  contentResultsElement.innerHTML = '';
+  renderAll(characters, contentResultsElement);
   contentFavElement.innerHTML = '';
-  renderCharacters(favorites, contentFavElement);
+
+  renderFavorites(favorites, contentFavElement);
 }
