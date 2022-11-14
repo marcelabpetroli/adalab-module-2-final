@@ -1,7 +1,17 @@
-.hero {
-  background-image: url("../images/breaking-bad.jpeg");
+.hero-image {
+  background-color: $bkg-color;
+  background-image: url('../images/breaking-bad2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
-  height: 35vh;
+  background-position: center;
+  height: 45vh;
+  width: 100vw;
+  @media (min-width: 1300px) {
+    background-size: 60%;
+  }
+}
+.walter-gif {
+  position: absolute;
+  padding-top: 1.5rem;
+  width: 8rem;
 }

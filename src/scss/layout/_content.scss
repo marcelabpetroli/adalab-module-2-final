@@ -1,3 +1,7 @@
+.body {
+  font-family: $main-font;
+  background-color: rgb(240, 252, 255);
+}
 .content {
   display: grid;
   grid-template-columns: 0.3fr 1fr;
@@ -26,6 +30,12 @@
   text-align: center;
 }
 .selected {
-  color: white;
-  background-color: aquamarine;
+  color: $white;
+  background-color: $bkg-cards-selected;
+}
+.title {
+  padding-bottom: 1rem;
+}
+.icons {
+  color: rgba(251, 98, 3, 0.984);
 }

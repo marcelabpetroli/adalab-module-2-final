@@ -5,7 +5,7 @@ function handleClick(event) {
   const inputValue = searchInputElement.value;
   contentResultsElement.innerHTML = '';
 
-  const filteredCharacters = characters.filter((eachCharacter) => eachCharacter.name.toLowerCase().includes(inputValue));
+  const filteredCharacters = characters.filter((eachCharacter) => eachCharacter.name.toLowerCase().includes(inputValue.toLowerCase()));
 
   renderCharacters(filteredCharacters, contentResultsElement);
 }
