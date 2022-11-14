@@ -28,6 +28,7 @@ function renderCharacters(characArray, container) {
 function renderOneCharacter(element, classFav) {
   const listElement = document.createElement('li');
   const articleElement = document.createElement('article');
+  const imageContainer = document.createElement('div');
   const imageElement = document.createElement('img');
   const nameElement = document.createElement('h3');
   const statusElement = document.createElement('p');
@@ -35,8 +36,12 @@ function renderOneCharacter(element, classFav) {
   const title = document.createTextNode(element.name);
   const status = document.createTextNode(element.status);
 
-  articleElement.setAttribute('class', `js_characters characters ${classFav}`);
+  listElement.setAttribute('class', 'list-element');
+  articleElement.setAttribute('class', `js_characters article-character ${classFav}`);
   articleElement.setAttribute('id', element.char_id);
+  statusElement.setAttribute('class', 'status');
+
+  imageContainer.setAttribute('class', 'image-container');
   imageElement.setAttribute('src', element.img);
   imageElement.setAttribute('alt', element.name);
   imageElement.setAttribute('title', element.name);
@@ -44,7 +49,8 @@ function renderOneCharacter(element, classFav) {
 
   nameElement.appendChild(title);
   statusElement.appendChild(status);
-  articleElement.appendChild(imageElement);
+  imageContainer.appendChild(imageElement);
+  articleElement.appendChild(imageContainer);
   articleElement.appendChild(nameElement);
   articleElement.appendChild(statusElement);
   listElement.appendChild(articleElement);
