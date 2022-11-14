@@ -1,4 +1,5 @@
 'use strict';
+
 const contentResultsElement = document.querySelector('.js_content_results');
 const contentFavElement = document.querySelector('.js_content_fav');
 const searchInputElement = document.querySelector('.js_input');

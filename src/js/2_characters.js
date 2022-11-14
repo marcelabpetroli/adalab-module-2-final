@@ -1,6 +1,5 @@
 'use strict';
 
-// Function to create html for each character
 function handleClick(event) {
   event.preventDefault();
   const inputValue = searchInputElement.value;
@@ -68,7 +67,6 @@ function handleClickCharacter(event) {
 
   if (characterInFavoritesIndex === -1) {
     favorites.push(selectedCharacter);
-
     localStorage.setItem('favoriteCharacters', JSON.stringify(favorites));
   } else {
     favorites.splice(characterInFavoritesIndex, 1);
