@@ -1,0 +1,31 @@
+.content {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  grid-gap: 2rem;
+  margin-top: 8rem;
+  font-size: 1.6rem;
+}
+.content-fav {
+  border-right: solid 1px;
+  min-height: 65vh;
+}
+.content-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 15rem);
+  grid-gap: 10rem;
+}
+.characters {
+  cursor: pointer;
+}
+.image-characters {
+  width: 15.2rem;
+  height: 20rem;
+}
+.section-characters,
+.section-favorites {
+  text-align: center;
+}
+.selected {
+  color: white;
+  background-color: aquamarine;
+}
