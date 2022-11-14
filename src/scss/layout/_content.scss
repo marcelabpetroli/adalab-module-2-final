@@ -13,6 +13,9 @@
 .content-fav {
   border-right: solid 1px;
   min-height: 65vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 18rem);
+  justify-content: center;
 }
 .content-results {
   display: grid;
@@ -20,8 +23,9 @@
   grid-gap: 5rem;
 }
 .list-element {
-  width: 18rem;
+  width: 17rem;
   list-style: none;
+  margin-top: 1.5rem;
 }
 .article-character {
   cursor: pointer;
