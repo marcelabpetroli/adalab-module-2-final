@@ -58,14 +58,27 @@
 }
 .section-characters,
 .section-favorites {
+  padding-top: 2.5rem;
   text-align: center;
 }
 .selected {
   background-color: $bkg-cards-selected;
 }
 .title {
+  padding-top: 3rem;
   padding-bottom: 2rem;
 }
 .icons {
   color: $icons;
 }
+// .characters-gif-container {
+//   width: 6rem;
+//   position: relative;
+// }
+// .characters-gif {
+//   position: absolute;
+//   left: 1800%;
+//   transform: translate(-50%, -50%);
+//   width: 100%;
+//   border-radius: 100%;
+// }

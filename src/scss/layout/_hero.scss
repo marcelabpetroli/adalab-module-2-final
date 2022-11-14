@@ -1,7 +1,7 @@
 .hero-image {
   background-color: $bkg-color;
   background-image: url('../images/breaking-bad2.jpg');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   height: 45vh;
