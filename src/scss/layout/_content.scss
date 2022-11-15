@@ -76,6 +76,8 @@
   background: none;
 }
 .fa-solid:hover {
-  color: $orange;
   cursor: pointer;
+  transition: all 0.2s;
+  transform: translateY(-0.2rem);
+  box-shadow: 0 1rem 2rem $color-bkg-btn;
 }
