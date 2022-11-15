@@ -30,6 +30,14 @@ function renderAll(characArray, container) {
 }
 
 function renderFavorites(characArray, container) {
+  const resetFavoritesBtn = document.createElement('button');
+  const textResetButton = document.createTextNode('Reset All');
+  resetFavoritesBtn.appendChild(textResetButton);
+  resetFavoritesBtn.setAttribute('class', 'reset-favorites-btn');
+  container.appendChild(resetFavoritesBtn);
+
+  resetFavoritesBtn.addEventListener('click', resetFavorites);
+
   characArray.forEach((element) => {
     const characterInFavoritesIndex = favorites.findIndex((character) => character.char_id === element.char_id);
 
@@ -52,6 +60,7 @@ function renderFavorites(characArray, container) {
     listElement.appendChild(article);
     container.appendChild(listElement);
   });
+
   addAllListeners();
 }
 
@@ -111,3 +120,13 @@ function handleClickCharacter(event) {
   contentFavElement.innerHTML = '';
   renderFavorites(favorites, contentFavElement);
 }
+
+function resetFavorites(event) {
+  event.preventDefault();
+  contentFavElement.innerHTML = '';
+  favorites = [];
+  localStorage.removeItem('favoriteCharacters');
+  contentResultsElement.innerHTML = '';
+  renderAll(characters, contentResultsElement);
+}
+// btnReset.addEventListener('click', resetFavorites);

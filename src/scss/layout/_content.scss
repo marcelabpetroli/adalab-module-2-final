@@ -5,10 +5,13 @@
 }
 .content {
   display: grid;
-  grid-template-columns: 0.3fr 1fr;
+  grid-template-columns: 0.2fr 1fr;
   grid-gap: 2rem;
   padding-top: 5.5rem;
   font-size: 1.4rem;
+  @media (min-width: 1500px) {
+    grid-template-columns: 0.15fr 1fr;
+  }
 }
 .content-fav {
   border-right: solid 1px;
@@ -80,4 +83,20 @@
   transition: all 0.2s;
   transform: translateY(-0.2rem);
   box-shadow: 0 1rem 2rem $color-bkg-btn;
+}
+.reset-favorites-btn {
+  display: block;
+  width: 8rem;
+  height: 2.5rem;
+  margin-left: 4.5rem;
+  background-color: $hover-btn;
+  color: $white;
+  border: none;
+  border-radius: 5%;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 1rem 2rem $color-bkg-btn;
+  }
 }
