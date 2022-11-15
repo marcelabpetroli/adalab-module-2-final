@@ -1,24 +1,16 @@
-.body {
-  font-family: $main-font;
-  background-color: $bkg-body;
-  color: $color-main-font;
+.title {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
 }
 .content {
   display: grid;
-  grid-template-columns: 0.2fr 1fr;
+  grid-template-columns: 0.17fr 1fr;
   grid-gap: 2rem;
   padding-top: 5.5rem;
   font-size: 1.4rem;
   @media (min-width: 1500px) {
-    grid-template-columns: 0.15fr 1fr;
+    grid-template-columns: 0.1fr 1fr;
   }
-}
-.content-fav {
-  border-right: solid 1px;
-  min-height: 65vh;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 18rem);
-  justify-content: center;
 }
 .content-results {
   display: grid;
@@ -39,9 +31,9 @@
   align-items: center;
   background-color: $white;
   border-radius: 5%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 $box-shadow-cards;
   &:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 $box-shadow-cards;
   }
 }
 .status {
@@ -66,37 +58,4 @@
 }
 .selected {
   background-color: $bkg-cards-selected;
-}
-.title {
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-}
-.icons {
-  color: $icons;
-}
-.delete-btn {
-  border: none;
-  background: none;
-}
-.fa-solid:hover {
-  cursor: pointer;
-  transition: all 0.2s;
-  transform: translateY(-0.2rem);
-  box-shadow: 0 1rem 2rem $color-bkg-btn;
-}
-.reset-favorites-btn {
-  display: block;
-  width: 8rem;
-  height: 2.5rem;
-  margin-left: 4.5rem;
-  background-color: $hover-btn;
-  color: $white;
-  border: none;
-  border-radius: 5%;
-  cursor: pointer;
-
-  &:hover {
-    transform: translateY(-0.2rem);
-    box-shadow: 0 1rem 2rem $color-bkg-btn;
-  }
 }

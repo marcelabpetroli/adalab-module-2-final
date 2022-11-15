@@ -1,6 +1,13 @@
-@import "core/reset";
-@import "core/variables";
-@import "layout/hero";
-@import "layout/form";
-@import "layout/content";
-@import "layout/footer";
+@import 'core/reset';
+@import 'core/variables';
+@import 'layout/hero';
+@import 'layout/form';
+@import 'layout/content';
+@import 'layout/content-fav';
+@import 'layout/footer';
+
+.body {
+  font-family: $main-font;
+  background-color: $bkg-body;
+  color: $font-color-main;
+}

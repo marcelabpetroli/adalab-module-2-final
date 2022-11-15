@@ -26,7 +26,6 @@ function renderAll(characArray, container) {
     listElement.appendChild(article);
     container.appendChild(listElement);
   });
-  addAllListeners();
 }
 
 function renderFavorites(characArray, container) {
@@ -58,10 +57,9 @@ function renderFavorites(characArray, container) {
     deleteButton.appendChild(deleteIcon);
     article.appendChild(deleteButton);
     listElement.appendChild(article);
+
     container.appendChild(listElement);
   });
-
-  addAllListeners();
 }
 
 function renderTemplate(element, classFav) {
@@ -91,12 +89,8 @@ function renderTemplate(element, classFav) {
   articleElement.appendChild(nameElement);
   articleElement.appendChild(statusElement);
 
+  articleElement.addEventListener('click', handleClickCharacter);
   return articleElement;
-}
-
-function addAllListeners() {
-  const allArticles = document.querySelectorAll('.js_characters');
-  allArticles.forEach((element) => element.addEventListener('click', handleClickCharacter));
 }
 
 function handleClickCharacter(event) {
@@ -120,13 +114,3 @@ function handleClickCharacter(event) {
   contentFavElement.innerHTML = '';
   renderFavorites(favorites, contentFavElement);
 }
-
-function resetFavorites(event) {
-  event.preventDefault();
-  contentFavElement.innerHTML = '';
-  favorites = [];
-  localStorage.removeItem('favoriteCharacters');
-  contentResultsElement.innerHTML = '';
-  renderAll(characters, contentResultsElement);
-}
-// btnReset.addEventListener('click', resetFavorites);
