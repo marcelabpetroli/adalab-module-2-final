@@ -41,10 +41,14 @@ function renderFavorites(characArray, container) {
     }
     const article = renderTemplate(element, classFavorite);
     const listElement = document.createElement('li');
+    const deleteButton = document.createElement('button');
+    const deleteIcon = document.createElement('i');
+
     listElement.setAttribute('class', 'list-element');
-    const deleteElement = document.createElement('i');
-    deleteElement.setAttribute('class', 'fa-solid fa-trash-can');
-    article.appendChild(deleteElement);
+    deleteButton.setAttribute('class', 'delete-btn');
+    deleteIcon.setAttribute('class', 'fa-solid fa-trash-can');
+    deleteButton.appendChild(deleteIcon);
+    article.appendChild(deleteButton);
     listElement.appendChild(article);
     container.appendChild(listElement);
   });
@@ -83,7 +87,6 @@ function renderTemplate(element, classFav) {
 
 function addAllListeners() {
   const allArticles = document.querySelectorAll('.js_characters');
-
   allArticles.forEach((element) => element.addEventListener('click', handleClickCharacter));
 }
 
@@ -101,9 +104,10 @@ function handleClickCharacter(event) {
     favorites.splice(characterInFavoritesIndex, 1);
     localStorage.setItem('favoriteCharacters', JSON.stringify(favorites));
   }
+
   contentResultsElement.innerHTML = '';
   renderAll(characters, contentResultsElement);
-  contentFavElement.innerHTML = '';
 
+  contentFavElement.innerHTML = '';
   renderFavorites(favorites, contentFavElement);
 }
