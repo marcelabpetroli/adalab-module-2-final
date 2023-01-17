@@ -4,7 +4,7 @@ This project was created for the final individual evaluation of the JavaScript M
 
 # Specifications
 
-Develop a web page using HTML5, SAAS and JavaSript to retrieve data from an API (currently not available, use of a JSON instead), and render all the main characters of the Breaking Bad series. Create an input where the user can filter by the character's name, as well as a 'favorite' section. When a character is clicked it's displayed in this separate section. To eliminate a specific fav character the user can click on a trash can, or to clear all of them, use a reset button. The web page also has local storage implemented, so in case the user leaves the web her/his selection are not lost.
+Develop a web page using HTML5, SASS and JavaSript to retrieve data from an API (currently not available, use of a JSON instead), and render all the main characters of the Breaking Bad series. Create an input where the user can filter by the character's name, as well as a 'favorite' section. When a character is clicked it's displayed in this separate section. To eliminate a specific fav character the user can click on a trash can, or to clear all of them, use a reset button. The web page also has local storage implemented, so in case the user leaves the web her/his selection are not lost.
 
 # The goals were:
 
