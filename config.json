@@ -23,11 +23,14 @@
     "dist": "docs/"
   },
   "js": {
-    "src": [
-      "src/js/**/*.js"
-    ],
+    "src": ["src/js/**/*.js"],
     "dest": "public/assets/js/",
     "dist": "docs/assets/js/"
+  },
+  "data": {
+    "src": "src/data/**.json",
+    "dest": "public/assets/data",
+    "dist": "docs/assets/data/"
   },
   "images": {
     "src": "src/images/**/*.{gif,jpg,jpeg,JPG,JPEG,png,svg}",

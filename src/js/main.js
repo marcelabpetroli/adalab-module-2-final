@@ -1,7 +1,7 @@
 'use strict';
 
 // Fetch data
-fetch('https://breakingbadapi.com/api/characters')
+fetch('./assets/data/data.json')
   .then((response) => response.json())
   .then((json) => {
     characters = json;
