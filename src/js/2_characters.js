@@ -67,15 +67,10 @@ function renderTemplate(element, classFav) {
   const imageContainer = document.createElement('div');
   const imageElement = document.createElement('img');
   const nameElement = document.createElement('h3');
-  const statusElement = document.createElement('p');
 
   const title = document.createTextNode(element.name);
-  const status = document.createTextNode(element.status);
-
   articleElement.setAttribute('class', `js_characters article-character ${classFav}`);
   articleElement.setAttribute('id', element.char_id);
-  statusElement.setAttribute('class', 'status');
-
   imageContainer.setAttribute('class', 'image-container');
   imageElement.setAttribute(
     'src',
@@ -86,14 +81,10 @@ function renderTemplate(element, classFav) {
   imageElement.setAttribute('alt', element.name);
   imageElement.setAttribute('title', element.name);
   imageElement.setAttribute('class', 'image-characters');
-
   nameElement.appendChild(title);
-  statusElement.appendChild(status);
   imageContainer.appendChild(imageElement);
   articleElement.appendChild(imageContainer);
   articleElement.appendChild(nameElement);
-  articleElement.appendChild(statusElement);
-
   articleElement.addEventListener('click', handleClickCharacter);
   return articleElement;
 }

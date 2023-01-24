@@ -1,9 +1,8 @@
 .content-fav {
   border-right: solid 1px;
-  min-height: 65vh;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 18rem);
-  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 26rem);
+  place-items: center;
 }
 .icons {
   color: $icons;
@@ -11,17 +10,22 @@
 .delete-btn {
   border: none;
   background: none;
+  padding-top: 1rem;
+}
+.fa-solid {
+  font-size: 2rem;
+  color: rgb(76, 78, 79);
 }
 .fa-solid:hover {
   cursor: pointer;
   transition: all 0.2s;
   transform: translateY(-0.2rem);
+  box-shadow: 0 1rem 2rem $bkg-color-btn-reset;
 }
 .reset-favorites-btn {
   display: block;
   width: 8rem;
   height: 2.5rem;
-  margin-left: 4.5rem;
   background-color: $hover-btn;
   color: $white;
   border: none;

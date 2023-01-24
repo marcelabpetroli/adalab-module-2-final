@@ -1,21 +1,25 @@
 .title {
-  padding-top: 3rem;
+  padding-top: 1rem;
   padding-bottom: 2rem;
+
+  &-main {
+    font-size: 3rem;
+  }
 }
 .content {
   display: grid;
   grid-template-columns: 0.17fr 1fr;
   grid-gap: 2rem;
-  padding-top: 5.5rem;
-  font-size: 1.4rem;
+  padding-top: 5rem;
+  font-size: 1.3rem;
   @media (min-width: 1500px) {
     grid-template-columns: 0.1fr 1fr;
   }
 }
 .content-results {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 15rem);
-  grid-gap: 5rem;
+  grid-template-columns: repeat(auto-fill, 18rem);
+  grid-gap: 4rem;
   margin-bottom: 10rem;
 }
 .list-element {
@@ -24,8 +28,9 @@
   margin-top: 1.5rem;
 }
 .article-character {
-  cursor: pointer;
+  width: 200px;
   padding-bottom: 1rem;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,11 +40,8 @@
   box-shadow: 0 4px 8px 0 $box-shadow-cards;
   &:hover {
     box-shadow: 0 8px 16px 0 $box-shadow-cards;
+    background-image: linear-gradient(to bottom, rgb(230, 250, 236), rgb(197, 213, 206));
   }
-}
-.status {
-  padding: 1rem;
-  color: $color-sub-font;
 }
 .image-container {
   height: 220px;
@@ -51,10 +53,13 @@
   padding-bottom: 1rem;
   object-fit: cover;
   padding-top: 1rem;
+  border-radius: 12%;
+}
+.section-characters {
+  padding-top: 2.8rem;
 }
 .section-characters,
 .section-favorites {
-  padding-top: 2.5rem;
   text-align: center;
 }
 .selected {

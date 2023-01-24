@@ -5,29 +5,33 @@
 }
 .section-form {
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: $white;
-  width: 80vw;
-  height: 12vh;
+  width: 75vw;
+  height: 8vh;
   @media (min-width: 1500px) {
     height: 8vh;
-    width: 70vw;
+    width: 72vw;
   }
 }
 .section-form-input {
   border: solid 2px $orange;
   width: 60vw;
   padding: 0.8rem;
-  margin: 3rem;
+  margin: 1.5rem;
+  @media (min-width: 1500px) {
+    margin: 4rem;
+  }
 }
 .btn__search {
   background-color: $orange;
   color: $white;
   border: none;
   border-radius: 5%;
-  width: 5.5rem;
+  width: 8rem;
+  height: 3rem;
   padding: 0.5rem;
   cursor: pointer;
 
