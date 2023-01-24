@@ -77,7 +77,12 @@ function renderTemplate(element, classFav) {
   statusElement.setAttribute('class', 'status');
 
   imageContainer.setAttribute('class', 'image-container');
-  imageElement.setAttribute('src', element.img);
+  imageElement.setAttribute(
+    'src',
+    element.img
+      ? element.img
+      : 'https://images.squarespace-cdn.com/content/v1/60f1f2fd6ddd74714dc68f1f/1627585180820-3PUYKP41LLEK3PNFZG3S/blank-portrait.png'
+  );
   imageElement.setAttribute('alt', element.name);
   imageElement.setAttribute('title', element.name);
   imageElement.setAttribute('class', 'image-characters');
