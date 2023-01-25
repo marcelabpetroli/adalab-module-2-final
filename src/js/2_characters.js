@@ -30,7 +30,7 @@ function renderAll(characArray, container) {
 
 function renderFavorites(characArray, container) {
   const resetFavoritesBtn = document.createElement('button');
-  const textResetButton = document.createTextNode('Reset All');
+  const textResetButton = document.createTextNode('Reset');
   resetFavoritesBtn.appendChild(textResetButton);
   resetFavoritesBtn.setAttribute('class', 'reset-favorites-btn');
   container.appendChild(resetFavoritesBtn);

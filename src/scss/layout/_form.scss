@@ -3,27 +3,21 @@
   align-items: center;
   justify-content: center;
 }
+
 .section-form {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: $white;
-  width: 82vw;
-  height: 9vh;
-  @media (min-width: 1500px) {
-    height: 8vh;
-    width: 72vw;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(193, 144, 144);
 }
+
 .section-form-input {
   border: solid 2px $orange;
   width: 60vw;
   padding: 0.8rem;
   margin: 1.5rem;
-  @media (min-width: 1500px) {
-    margin: 4rem;
-  }
+  letter-spacing: 0.2rem;
 }
 .btn__search {
   background-color: $orange;
@@ -33,6 +27,7 @@
   width: 8rem;
   height: 3rem;
   padding: 0.5rem;
+  letter-spacing: 0.2rem;
   cursor: pointer;
 
   &:hover {
